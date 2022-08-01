@@ -1,0 +1,110 @@
+
+@import "components/functions";
+@import "components/grid";
+@import "components/navigation";
+@import "components/portfolio";
+@import "components/project";
+
+$border-color: #23232f;
+
+body {
+	background: #fff;
+	font-family: 'Work Sans', sans-serif;
+
+	//Set variables
+	--text-color: #111117;
+	--background-color: #fff;
+	color: #111117;
+	color: var(--text-color);
+	background: #fff;
+	background: var(--background-color);
+}
+// body.dark {
+// 	--text-color: #fff;
+// 	--background-color: #111117;
+
+// 	color: #fff;
+// 	color: var(--text-color);
+// 	background: #111117;
+// 	background: var(--background-color);
+// 	.logo {
+// 		fill: white;
+// 		fill: var(--text-color);
+// 	}
+// 	section#portfolio article,
+// 	section#portfolio article figure{
+// 		border-color: $border-color;
+// 	}
+
+// 	video {
+// 		filter: drop-shadow(16px 16px 0px blue);
+// 	}
+// }
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+::-moz-selection { background: #111117; color: white;}
+::selection { background: #111117; color: white;}
+a {
+	color: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	padding-bottom: 4px;
+	text-transform: lowercase;
+	position: relative;
+
+	&:after {
+		content: '';
+		display: block;
+		height: 2px;
+		background: var(--text-color);
+		left: 0;
+		width: 100%;
+		position: absolute;
+		transition: .4s all;
+		will-change: transform;
+		bottom: -2px;
+		pointer-events: none;
+	}
+	&:hover {
+		&::after {
+			background: transparent;
+			transform: translateY(8px);
+		}
+	}
+}
+main {
+	@include max-width();
+	background: inherit;
+}
+.video {
+	position: relative;
+	order: -1;
+	@include break(md) {
+		order: 0;
+	}
+	&::before,
+	&::after {
+		top: 0;
+		content: '';
+		height: 100%;
+		width: 6px;
+		display: block;
+		background: red;
+		position: absolute;
+		z-index: 2;
+		background: white;
+	}
+	&::before {
+		left: -1px;
+	}
+	&::after {
+		right: -1px;
+	}
+}
+
+

@@ -1,0 +1,73 @@
+article[id*="show"] {
+	//border: 1px solid #e0e0e0;
+	figure {
+		background: #e0e0e0;
+		height: 75vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 35px 50px -15px rgba(0,0,0,.21), 0 15px 35px -5px rgba(0,0,0,.18);
+		@include break(md) {
+			height: 21vw;
+		}
+
+		> * {
+			height: 50%;
+			max-width: 50%;
+			display: block;
+		}
+	}
+	header {
+		h1 {
+			margin-bottom: 1.125rem;
+			display: block;
+			font-size: 1.75rem;
+			font-weight: 500;
+		}
+		p {
+			line-height: 1.6;
+			font-size: 1.25rem;
+		}
+	}
+	.read-more {
+		margin-top: 1rem;
+		a {
+			font-size: 1.25rem;
+		}
+	}
+}
+// body.dark {
+// 	article[id*="show"] {
+// 		border-color: transparent;
+// 		padding: 0;
+// 		figure {
+// 			border-color: transparent;
+// 			margin: 0 0 1.5rem;
+// 		}
+// 		header {
+// 			h1 {
+// 				margin-bottom: .5rem;
+// 			}
+// 		}
+// 		footer {
+// 			margin-top: .5rem;
+// 		}
+// 	}
+// }
+
+//Brands colors
+article#show-dagbladet figure {
+	background: #d60000;
+}
+article#show-feieteknikk figure {
+	background: #111d29;
+}
+article#show-sol figure {
+	background: #455C7B;
+}
+article#show-pressfire figure {
+	background: #333;
+}
+article#show-esa figure {
+	background: #2b395a;
+}

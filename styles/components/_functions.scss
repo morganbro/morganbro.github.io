@@ -1,0 +1,26 @@
+$breakpoints: (
+	sm: 20rem,
+	md: 40rem,
+	lg: 62.5rem,
+	xl: 90rem,
+	xxl: 120rem
+);
+// media query mixin
+@mixin break($size) {  
+	@media (min-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+@mixin breakmax($size) {
+	@media (max-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+@mixin max-width {
+	max-width: 80vw;
+	margin: 0 auto;
+	@include break(xxl) {
+		max-width: map-get($breakpoints, xl);
+	}
+}

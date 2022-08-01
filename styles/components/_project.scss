@@ -1,0 +1,54 @@
+body.project-page {
+	header[role="banner"] {
+		padding-bottom: 3.125rem;
+		padding-top: 3.125rem;
+	}
+}
+
+header.hero{
+	height: 25vh;
+	display: flex;
+	padding: 2rem;
+	position: relative;
+	overflow: hidden;
+	will-change: top;
+	@include break(md) {
+		height: 50vh;
+	}
+	figure {
+		will-change: top;
+		position: relative;
+		max-width: 50rem;
+		width: 100%;
+		margin: auto;
+		padding: 2%;
+		text-align: center;
+	}
+}
+
+// Brand skin
+body#project-dagbladet {
+	header.hero {
+		background: #a30000;
+	}
+}
+body#project-feieteknikk {
+	header.hero {
+		background: #111d29;
+	}
+}
+body#project-pressfire {
+	header.hero {
+		background: #323232;
+	}
+}
+body#project-esa {
+	header.hero {
+		background: linear-gradient(-38deg,#161e32 0,#2b395a 100%);
+	}
+}
+body#project-sol {
+	header.hero {
+		background: #455C7B;
+	}
+}
